@@ -1,1 +1,1 @@
-hhhhvvvvv
+var a = 0;
