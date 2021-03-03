@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Test weather app</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+<body>
+  <div class="container">
+    <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+    <h1>
+      New York
+    </h1>
+    <ul>
+      <li>
+        Monday 10:00
+      </li>
+   
+      <li>
+        clear
+      </li>
+    </ul>
+  </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="clearfix weather-temperature">
+        <img 
+        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
+        alt="not-clear"
+        class="float-left"
+        />
+        <div class="float-left">
+          <strong>12</strong><span class="units">*C \ <a href="#">F</a></span>
+        </div>
+      </div>
+      </div>
+      <div class="col-6">
+        <ul>
+          <li>
+            Precipitation:0
+          </li>
+          <li>
+            Humidity: 00
+          </li>
+          <li>
+            Wind: 1 km/h
+          </li>
+        </ul>
+      </div>
+    </div>  
+    </div>
+      <small>
+      <a href="https://gitlab.com/echerevko"
+      target="_blank">
+      Open-source code 
+      </a>
+      by Evgeniya Cherevko
+    </small> 
+  </div>
+  </div>
+  <script src="src/main.js"></script>
+</body>
+</html>
