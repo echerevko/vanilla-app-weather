@@ -59,11 +59,19 @@ function displayTemperature(response) {
     );
 
 }
-
-
-let apiKey = '41b994c32cd18a931e3e8c1b0b2c94c9';
-let city = 'new york'
+function search(city) {
+    let apiKey = '41b994c32cd18a931e3e8c1b0b2c94c9';
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayTemperature);
+}
+search('kiev');
 
-    console.log(apiUrl);
-    axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInput = document.querySelector('#city-input');
+    search(cityInput.value);
+
+}
+
+let form = document.querySelector('#search-form');
+form.addEventListener('submit', handleSubmit);
