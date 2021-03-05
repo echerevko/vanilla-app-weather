@@ -33,6 +33,7 @@
         src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
         alt="not-clear"
         class="float-left"
+        id="icon"
         />
         <div class="float-left">
           <strong id="temperature"></strong><span class="units">*C \ <a href="#">F</a></span>
@@ -42,7 +43,7 @@
       <div class="col-6">
         <ul>
           <li>
-            Precipitation:0
+            Feels like: <span id="temperatureDescription"> </span>*C
           </li>
           <li>
             Humidity: <span id="humidity"> </span>%

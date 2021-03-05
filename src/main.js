@@ -29,27 +29,41 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
     console.log(response.data);
     let temperatureElement = document.querySelector('#temperature');
+    let temperatureDescriptionElement = document.querySelector('#temperatureDescription');
     let cityElement = document.querySelector('#city');
     let descriptionElement = document.querySelector('#description');
     let humidityElement = document.querySelector('#humidity');
     let windElement = document.querySelector('#wind');
     let dateElement = document.querySelector('#date');
+    let iconElement = document.querySelector('#icon');
+
 
 
 
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureDescriptionElement.innerHTML = Math.round(response.data.main.feels_like);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
-
+    iconElement.setAttribute(
+        'src',
+        //'http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png'
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute(
+        'alt',
+        //'http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png'
+        `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    );
 
 }
 
 
 let apiKey = '41b994c32cd18a931e3e8c1b0b2c94c9';
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+let city = 'new york'
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     console.log(apiUrl);
     axios.get(apiUrl).then(displayTemperature);
