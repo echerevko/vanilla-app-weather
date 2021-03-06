@@ -139,4 +139,4 @@ fahrenheitLink.addEventListener('click', displayFahrenheitTemperature);
 let celsiusLink = document.querySelector('#celsius-link');
 celsiusLink.addEventListener('click', displayCelsiusTemperature);
 
-search('kiev');
+search('stockholm');
