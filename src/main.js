@@ -87,7 +87,6 @@ function dispalyForecast(response) {
     }
 }
   
-
 function search(city) {
     let apiKey = '41b994c32cd18a931e3e8c1b0b2c94c9';
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
